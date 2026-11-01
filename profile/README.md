@@ -13,14 +13,27 @@ a command-line tool, a GitHub Action, a pre-commit hook and a Claude Code plugin
 | Concern | Tool | Library |
 |---|---|---|
 | Commit conventions | [commit-me](https://github.com/dev-build-deploy/commit-me): Conventional Commits, in the hook and on every PR | [commit-it](https://github.com/dev-build-deploy/commit-it) |
-| Versions and releases | [release-me](https://github.com/dev-build-deploy/release-me): GitHub Releases with SemVer or CalVer, changelogs, assets | [version-it](https://github.com/dev-build-deploy/version-it) |
+| Versions and releases | [release-me](https://github.com/dev-build-deploy/release-me): GitHub Releases with SemVer or CalVer, changelogs, assets | [version-it](https://github.com/dev-build-deploy/version-it), [keepachangelog-it](https://github.com/dev-build-deploy/keepachangelog-it) |
 | Licences and copyright | [reuse-me](https://github.com/dev-build-deploy/reuse-me): REUSE/SPDX compliance and an SBOM | [reuse-it](https://github.com/dev-build-deploy/reuse-it), [dep5-it](https://github.com/dev-build-deploy/dep5-it) |
+| Pull requests | [pull-me](https://github.com/dev-build-deploy/pull-me): descriptions with Why, How, Review hints and Proof, and plain English (Vale) | |
 | Secrets | [secret-me](https://github.com/dev-build-deploy/secret-me): no token, key or password reaches a repository | |
 | Planning | [plan-me](https://github.com/dev-build-deploy/plan-me): a backlog on GitHub issues and Projects | |
 | Documentation | [docs-me](https://github.com/dev-build-deploy/docs-me): repository docs published to the wiki | |
 | Diagnostics | | [diagnose-it](https://github.com/dev-build-deploy/diagnose-it), [sarif-it](https://github.com/dev-build-deploy/sarif-it), [comment-it](https://github.com/dev-build-deploy/comment-it) |
 
-The Claude Code plugins are collected in one marketplace: [claude-plugins](https://github.com/dev-build-deploy/claude-plugins).
+## Claude Code plugins
+
+The plugins of the `-me` tools are collected in one marketplace,
+[claude-plugins](https://github.com/dev-build-deploy/claude-plugins), so a Claude Code session gets a commit message,
+a licence header, a secret check or a pull request description right before CI would reject it:
+
+```text
+/plugin marketplace add dev-build-deploy/claude-plugins
+/plugin install commit-me@dev-build-deploy
+```
+
+[build-it](https://github.com/dev-build-deploy/build-it) is a second marketplace that delegates the software
+development life cycle of these repositories to agents.
 
 ## How they're built
 
@@ -31,6 +44,12 @@ The Claude Code plugins are collected in one marketplace: [claude-plugins](https
   mistake is fixed where it's made.
 - **Used on themselves.** Every repository here runs these tools on itself: its commits, licences, secrets and
   releases.
+
+## Contributing
+
+Issues and pull requests are welcome. The shared rules (Conventional Commits, REUSE headers, no secrets, pull
+requests with Why, How, Review hints and Proof) are in [CONTRIBUTING.md](https://github.com/dev-build-deploy/.github/blob/main/CONTRIBUTING.md);
+report vulnerabilities privately as [SECURITY.md](https://github.com/dev-build-deploy/.github/blob/main/SECURITY.md) explains.
 
 ## Why
 
