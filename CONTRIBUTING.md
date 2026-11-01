@@ -27,7 +27,7 @@ You need [pre-commit](https://pre-commit.com) installed (`brew install pre-commi
 | **Signed commits** (SSH or GPG): GitHub shows them as Verified | repository rules |
 | **Squash merge**: the pull request title becomes the commit, so it follows Conventional Commits too | repository settings |
 
-The four sections of a pull request (the [template](.github/PULL_REQUEST_TEMPLATE.md) is filled in for you):
+The four sections of a pull request (the [template](https://github.com/dev-build-deploy/.github/blob/main/.github/PULL_REQUEST_TEMPLATE.md) is filled in for you):
 
 - **Why**: the value, for whom, and which issue asks for it.
 - **How**: what you built and why you chose it.
@@ -44,4 +44,4 @@ Write for a junior engineer who is new to the repository: plain words, short sen
 
 ## Security
 
-Do not report vulnerabilities in public issues. See [SECURITY.md](SECURITY.md).
+Do not report vulnerabilities in public issues. See [SECURITY.md](https://github.com/dev-build-deploy/.github/blob/main/SECURITY.md).
